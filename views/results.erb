@@ -1,0 +1,17 @@
+
+<h1>
+  <%= @num_of_dice %>d<%= @num_of_sides %>
+</h1>
+
+<a href="/process_roll?dice=<%= @num_of_dice%>&sides=<%= @num_of_sides%>">Roll Again</a> |
+<a href="/">Go back home</a>
+
+<ol>
+
+<% @rolls.each do |each_roll| %>
+  <li>Result: 
+  <em><strong> <%= each_roll %> </strong></em>
+  </li>
+<% end %>
+
+</ol>
